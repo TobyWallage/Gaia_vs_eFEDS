@@ -1,0 +1,3 @@
+SELECT t.source_id, t.ra, t.dec
+FROM gaiadr3.gaia_source AS t, gaiadr3.qso_candidates AS i
+WHERE t.source_id = i.source_id AND t.dec < 6.0 AND t.dec > -3.0 AND t.ra > 125 AND t.ra < 148 AND i.classlabel_dsc = 'quasar'
